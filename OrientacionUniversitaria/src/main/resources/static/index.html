@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduGuía Argentina - Orientación Vocacional Universitario</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fa-solid fa-graduation-cap me-2"></i>EduGuía Argentina
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html"><i class="fa-solid fa-house me-1"></i>Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="facultades.html"><i class="fa-solid fa-university me-1"></i>Facultades y Carreras</a></li>
+                </ul>
+                <div class="d-flex align-items-center" id="user-nav-section">
+                    <a href="login.html" class="btn btn-outline-light btn-sm rounded-pill px-3 me-2"><i class="fa-solid fa-right-to-bracket me-1"></i>Iniciar Sesión</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="hero-section text-center text-white d-flex align-items-center">
+        <div class="container py-5">
+            <h1 class="display-4 fw-bold mb-3">Encontrá tu Futuro Académico en Argentina</h1>
+            <p class="lead mb-4">Descubrí las mejores Facultades, Universidades Públicas y Privadas, y explorá carreras según tus intereses vocacionales.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="facultades.html" class="btn btn-light btn-lg text-primary fw-semibold px-4 shadow">Explorar Facultades</a>
+                <a href="#buscador-vocacional" class="btn btn-outline-light btn-lg px-4">Test de Orientación</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- RECOMENDADOR / BUSCADOR VOCACIONAL -->
+    <section id="buscador-vocacional" class="py-5 bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-10">
+                    <div class="card border-0 shadow-sm p-4 rounded-4">
+                        <h3 class="fw-bold text-center mb-3 text-primary"><i class="fa-solid fa-compass me-2"></i>Recomendador Vocacional Rápido</h3>
+                        <p class="text-center text-muted mb-4">Seleccioná tu área de interés favorita para filtrar opciones académicas acordes a tu perfil:</p>
+                        <div class="row g-3">
+                            <div class="col-md-8">
+                                <select id="select-area" class="form-select form-select-lg">
+                                    <option value="">-- Seleccioná un Área de Estudio --</option>
+                                    <option value="Tecnología e Informática">Tecnología e Informática</option>
+                                    <option value="Ingeniería">Ingeniería y Producción</option>
+                                    <option value="Ciencias Naturales">Ciencias Naturales y Exactas</option>
+                                    <option value="Geodesia">Geodesia y Agrimensura</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <button class="btn btn-primary btn-lg w-100 fw-bold" onclick="buscarCarreras()"><i class="fa-solid fa-magnifying-glass me-2"></i>Buscar Carreras</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESULTADOS DE CARRERAS -->
+    <section class="container py-5">
+        <h2 class="fw-bold mb-4 text-secondary"><i class="fa-solid fa-book-open me-2"></i>Carreras Destacadas</h2>
+        <div class="row g-4" id="contenedor-carreras">
+            <!-- Cargado dinámicamente con JS -->
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white py-4 mt-auto">
+        <div class="container text-center">
+            <p class="mb-1">&copy; 2026 EduGuía Argentina - Portal Institucional de Orientación Vocacional.</p>
+            <small class="text-white-50">Proyecto Académico - Todos los derechos reservados.</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
